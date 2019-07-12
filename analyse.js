@@ -1,4 +1,13 @@
 baseURL = "https://exceed.superposition.pknn.dev/data/2gorillas"
+month = []
+year = [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0]]
+
+function initMonth(){
+  for(let i=0; i<32; i++){
+    month.push([i, 0])
+  }
+}
+
 
 function back() {
   window.location.href = "home.html";
@@ -8,7 +17,9 @@ function getData() {
   fetch(baseURL)
       .then((res) => res.json())
       .then((data) => {
+          let d = new Date();
           readMindJunk(data["mindJunk"]);
+          monthData(data['stressCount'][`year`], d.getMonth()+1);
       })
 }
 
@@ -17,6 +28,21 @@ function readMindJunk(junk){
   for(let j of junk){
     Memo.innerHTML += `${j}<br>`
   }
+}
+
+function chartData(data) {
+  d = new Date();
+  return [data['stressCount'][`year`][`${d.getMonth()+1}`],data['stressCount'][`year`][`${d.getMonth()+1}`][`${d.getDate()}`]];
+}
+
+function monthData(data, m) {
+  initMonth();
+  for(let d in data[m]){
+    month[parseInt(d)][1] = data[d]
+    month[0][1] += data[d]
+  }
+  year[m][1] = month[0][1]
+  year[0][1] +=month[0][1]
 }
 
 google.charts.load('current', {
@@ -29,6 +55,7 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(drawChart);
 
+
 function drawBasic() {
 
   var data = new google.visualization.DataTable();
@@ -36,37 +63,6 @@ function drawBasic() {
   data.addColumn('number', 'Reach');
 
   data.addRows([
-    [1, 10],
-    [2, 23],
-    [3, 17],
-    [4, 18],
-    [5, 9],
-    [6, 11],
-    [7, 27],
-    [8, 33],
-    [9, 40],
-    [10, 32],
-    [11, 35],
-    [12, 30],
-    [13, 40],
-    [14, 42],
-    [15, 47],
-    [16, 44],
-    [17, 48],
-    [18, 52],
-    [19, 54],
-    [20, 42],
-    [21, 55],
-    [22, 56],
-    [23, 57],
-    [24, 60],
-    [25, 50],
-    [26, 52],
-    [27, 51],
-    [28, 49],
-    [29, 53],
-    [30, 55],
-    [31, 60]
   ]);
 
   var options = {
