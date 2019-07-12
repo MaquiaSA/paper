@@ -10,6 +10,7 @@
 </head>
 
 <body >
+    <script src="home.js"></script>
     <div class="top_margin"></div>
     <div>
         <img src="logo.png" alt="logo">
@@ -17,19 +18,17 @@
     <div class="top_margin"></div>
     <div class="middle">
         <div>
-            <a href="freeplay.html">
-                <button class="button button_free">Free Play</button>
-            </a>
+                <button class="button" id="free" onclick="freePlay()">Free Play</button>
         </div>
         <div>
             <a href="stress.html">
-                <button class="button button_stress">Stress Mode</button>
+                <button class="button" id="stress" onclick="stressPlay()">Stress Mode</button>
             </a>
         </div>
     </div>
     <div class="top_margin"></div>
     <div align="right">
-        <button class="button button_stat">Stat</button>
+        <button class="button" id="stat" onclick="analyse()">Stat</button>
     </div>
 </body>
 

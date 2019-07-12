@@ -43,25 +43,25 @@ textarea:focus {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.ok_button {
+#ok {
     background-color: #4caf50;
     margin-left: 1vw;
     margin-top: 7.5vw
 }
 
-.ok_button:hover {
+#ok:hover {
     transition-duration: 0.4s;
     background-color: #74c977;
     color: white;
 }
 
-.back_button {
+#back {
     background-color: #ff8d00;
     margin-left: 73vw;
     margin-top: 7.5vw
 }
 
-.back_button:hover {
+#back:hover {
     transition-duration: 0.4s;
     background-color: #fcb45c;
     color: white;

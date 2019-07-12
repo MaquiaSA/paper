@@ -22,7 +22,7 @@ img {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.button_free {
+#free {
     width: 300px;
     height: 80px;
     margin-left: 5vw;
@@ -31,13 +31,13 @@ img {
 }
 
 
-.button_free:hover {
+#free:hover {
     transition-duration: 0.4s;
     background-color: #74c977;
     color: white;
 }
 
-.button_stress {
+#stress {
     width: 300px;
     height: 80px;
     margin-left: 5vw;
@@ -45,13 +45,13 @@ img {
     background-color: #ff8d00;
 }
 
-.button_stress:hover {
+#stress:hover {
     transition-duration: 0.4s;
     background-color: #fcb45c;
     color: white;
 }
 
-.button_stat {
+#stat {
     border: 2px solid #ffffff;
     color: white;
     text-align: center;
@@ -63,7 +63,7 @@ img {
     background-color: #666666;
 }
 
-.button_stat:hover {
+#stat:hover {
     transition-duration: 0.4s;
     background-color: #999999;
     color: white;
@@ -78,5 +78,5 @@ img {
 }
 
 .top_margin {
-    margin-top: 109px;
+    margin-top: 9vw;
 }
