@@ -54,7 +54,7 @@ textarea:focus {
 #ok {
     background-color: #4caf50;
     margin-left: 1vw;
-    margin-top: 7.5vw
+    margin-top: 6vw
 }
 
 #ok:hover {
@@ -65,8 +65,8 @@ textarea:focus {
 
 #back {
     background-color: #ff8d00;
-    margin-left: 73vw;
-    margin-top: 7.5vw
+    margin-left: 65vw;
+    margin-top: 6vw
 }
 
 #back:hover {

@@ -5,16 +5,14 @@ body {
 
 }
 
-.divstyle {
-    background-color:black;
-    opacity: 0.5;
-    height: fit-content;
-    padding-bottom: 30px;
-
-}
-
 .divcolor {
-    background-color: aliceblue;
+    background-color:black;
+    opacity: 0.8;
+    height: 180px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+
 }
 
 .middle {
@@ -34,13 +32,14 @@ body {
 
 button {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    border: none;
-    color: black;
+    border: white solid 2px;
+    color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 3px;
 }
 
@@ -49,38 +48,38 @@ button {
 }
 
 #start {
-    background: #13FF69;
+    background: #4caf50;
 }
 
 #start:hover {
-    background: #44FF88;
+    background: #74c977;
 }
 
 #reset {
-    background: #E50000;
+    background: #eb0c0c;
 }
 
 #reset:hover {
-    background: #EB4747;
+    background: #e94040;
 }
 
 #pause {
-    background: #FFC80E;
+    background: #ffc80e;
 }
 
 #pause:hover {
-    background: #FFD64C;
+    background: #ffd858;
 }
 
 #back {
-    background: #A4A4A4;
+    background: #555555;
 }
 
 #back:hover {
-    background: #C0C0C0;
+    background: #999999;
 }
 
 .disabled {
-    opacity: 0.6;
+    opacity: 0.4;
     cursor: not-allowed;
 }
