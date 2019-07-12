@@ -1,0 +1,55 @@
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url("analyse_bg.png");
+    background-size: 100%;
+}
+
+
+.stressblock {
+    transform: rotate(3.55deg);
+    margin-top: 11.5vw;
+    margin-left: 4vw;
+}
+
+.stressgraph {
+    transform: rotate(-2.22deg);
+    margin-top: 6vw;
+    margin-left: 7vw;
+}
+
+.stressmemo {
+    transform: rotate(+1.82deg);
+    margin-top: 3vw;
+    margin-left: 20vw;
+}
+.split {
+    display: flex;
+}
+
+.header {
+    font-size: 24pt;
+}
+
+.inner {
+    font-size: 16pt;
+}
+
+button {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    background-color: #eb0c0c;
+    border: 2px solid #ffffff;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 2vw;
+}
+
+button:hover {
+    transition-duration: 0.4s;
+    background-color: #e94040;
+    color: white;
