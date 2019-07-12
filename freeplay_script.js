@@ -111,7 +111,7 @@ function reset(){
     putData("time", ctd);
     putData("score", 0);
     let Timer = document.getElementById("timer");
-    Timer.innerHTML = "0";
+    Timer.innerHTML = "30";
     document.getElementById("score").innerHTML = "0";
     buttonAble("start");
     buttonDisable("reset");

@@ -63,3 +63,9 @@ button:hover {
     background-color: #e94040;
     color: white;
 }
+
+#memo {
+    margin-top: 2vw;
+    margin-left: -15vw;
+    font-size: 16pt;
+}
