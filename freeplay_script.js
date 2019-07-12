@@ -85,3 +85,7 @@ function pause(){
     buttonAble("back");
 
 }
+
+function back(){
+    window.location.href = "home.html";
+}
