@@ -1,18 +1,22 @@
 body {
-    background-color: #222222;
+    background-image: url(diary_ai.png);
+    background-size: cover; 
+    background-position: left top;
     font-family: "Helvetica Neue", Helvetica, 'Kanit', sans-serif;
 }
 
 .title {
     margin-left: 1vw;
-    font-size: 16pt;
+    font-size: 14pt;
 
 }
 
 textarea {
-    margin-left: 1vw;
-    width: 70vw;
-    height: 30vw;
+    margin-left: 54.5vw;
+    margin-top: 16vw;
+    bottom: 5vw;
+    width: 22vw;
+    height: 22vw;
     padding: 1vw 1vw;
     overflow: scroll;
     resize: none;
@@ -23,7 +27,7 @@ textarea {
 
 textarea:focus {
     transition-duration: 0.1s;
-    border: 3px solid #555;
+    border: 3px#555;
 }
 
 .button {
@@ -42,6 +46,7 @@ textarea:focus {
 .ok_button {
     background-color: #4caf50;
     margin-left: 1vw;
+    margin-top: 7.5vw
 }
 
 .ok_button:hover {
@@ -53,6 +58,7 @@ textarea:focus {
 .back_button {
     background-color: #ff8d00;
     margin-left: 73vw;
+    margin-top: 7.5vw
 }
 
 .back_button:hover {
@@ -61,11 +67,14 @@ textarea:focus {
     color: white;
 }
 
-.paper {
+/* .paper {
     margin: 3.5vw 11.5vw;
     padding: 1vw 1vw;
     background-color: #ffffff;
-}
+    margin-right: 44vw;
+    margin-top: 20vw;
+   
+} */
 
 .flex {
     display: flex;
