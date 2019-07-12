@@ -29,7 +29,7 @@ function start(){
     let Score = document.getElementById("score");
     let startTimer = document.getElementById("startCtd")
     startCtd = 3;
-    Timer.innerHTML = `${ctd} s`;
+    Timer.innerHTML = `${ctd}`;
     Score.innerHTML = "0";
     buttonDisable("start");
     buttonDisable("back");
@@ -39,7 +39,7 @@ function start(){
     ctdProcess = setInterval( () => {
         postData();
         ctd--;
-        Timer.innerHTML = `${ctd} s`;
+        Timer.innerHTML = `${ctd}`;
         if(ctd == 0){
             buttonAble("start");
             buttonDisable("pause")
@@ -68,7 +68,7 @@ function reset(){
     ctd = 0;
     postData();
     let Timer = document.getElementById("timer");
-    Timer.innerHTML = "0 s";
+    Timer.innerHTML = "30";
     document.getElementById("score").innerHTML = "0";
     buttonAble("start");
     buttonDisable("reset");
