@@ -2,6 +2,7 @@ body {
     font-family: 'Kanit', sans-serif;
     background-image: url("analyse_bg.png");
     background-size: 100%;
+    overflow: hidden;
 }
 
 
@@ -34,6 +35,14 @@ body {
     font-size: 16pt;
 }
 
+.graph1 {
+    margin-left: -72px;
+}
+
+.graph2 {
+    margin-left: -50px;
+}
+
 button {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     background-color: #eb0c0c;
@@ -53,3 +62,4 @@ button:hover {
     transition-duration: 0.4s;
     background-color: #e94040;
     color: white;
+}

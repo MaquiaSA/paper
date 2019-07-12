@@ -14,20 +14,28 @@ body {
 textarea {
     margin-left: 54.5vw;
     margin-top: 16vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
     bottom: 5vw;
     width: 22vw;
     height: 22vw;
     padding: 1vw 1vw;
-    overflow: scroll;
+    overflow: hidden;
     resize: none;
     font-size: 16pt;
     font-family: 'Kanit', sans-serif;
-
 }
 
 textarea:focus {
     transition-duration: 0.1s;
-    border: 3px#555;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: transparent;
+    border-right: transparent;
+    outline: 0;
 }
 
 .button {
