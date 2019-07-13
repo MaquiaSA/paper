@@ -5,23 +5,16 @@ body {
     overflow: hidden;
 }
 
-
-.stressblock {
-    transform: rotate(3.55deg);
-    margin-top: 11.5vw;
-    margin-left: 4vw;
-}
-
 .stressgraph {
-    transform: rotate(-2.22deg);
+    transform: rotate(-4.04deg);
     margin-top: 6vw;
-    margin-left: 7vw;
+    margin-left: 12vw;
 }
 
 .stressmemo {
     transform: rotate(+1.82deg);
     margin-top: 3vw;
-    margin-left: 20vw;
+    margin-left: 40vw;
 }
 .split {
     display: flex;
@@ -36,11 +29,11 @@ body {
 }
 
 .graph1 {
-    margin-left: -72px;
+    margin-left: -50px;
 }
 
 .graph2 {
-    margin-left: -50px;
+    margin-left: -25px;
 }
 
 button {

@@ -1,5 +1,8 @@
 baseURL = "https://exceed.superposition.pknn.dev/data/2gorillas"
 month = []
+let twoArrayMonth = [
+  ['Month', 'Reach'],
+]
 year = [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0]]
 
 function initMonth(){
@@ -20,31 +23,25 @@ function getData() {
           let d = new Date();
           readMindJunk(data["mindJunk"]);
           monthData(data['stressCount'][`year`], d.getMonth()+1);
-      })
-}
 
-function readMindJunk(junk){
-  Memo = document.getElementById("memo");
-  for(let j of junk){
-    Memo.innerHTML += `${j}<br>`
-  }
-}
+          let dic = {}
 
-function chartData(data) {
-  d = new Date();
-  return [data['stressCount'][`year`][`${d.getMonth()+1}`],data['stressCount'][`year`][`${d.getMonth()+1}`][`${d.getDate()}`]];
-}
-
-function monthData(data, m) {
-  initMonth();
-  for(let d in data[m]){
-    month[parseInt(d)][1] = data[d]
-    month[0][1] += data[d]
-  }
-  year[m][1] = month[0][1]
-  year[0][1] +=month[0][1]
-}
-
+          for (const [key, value] of Object.entries( data['stressCount'][`year`])) {
+            let total = 0;
+            for( let amountPlay in value){
+              total += value[amountPlay];
+            }
+            dic[key] = total
+ 
+          }
+        
+          for(let key in dic){
+            let l = []
+            l.push(key)
+            l.push(dic[key])
+            twoArrayMonth.push(l)
+          }
+          
 google.charts.load('current', {
   packages: ['corechart', 'line']
 });
@@ -55,6 +52,28 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(drawChart);
 
+      })
+}
+
+function readMindJunk(junk){
+  Memo = document.getElementById("memo");
+  for(let j of junk){
+    Memo.innerHTML += `${j}<br>`
+  }
+}
+
+function monthData(data, m) {
+  initMonth();
+  console.log(data)
+  console.log(m.toString())
+  for(let d in data[m.toString()]){
+    console.log(data[m][parseInt(d)])
+    month[parseInt(d)][1] = data[m][parseInt(d)]
+  }
+  console.log(month)
+}
+
+
 
 function drawBasic() {
 
@@ -62,8 +81,7 @@ function drawBasic() {
   data.addColumn('number', 'Date');
   data.addColumn('number', 'Reach');
 
-  data.addRows([
-  ]);
+  data.addRows(month);
 
   var options = {
     hAxis: {
@@ -82,25 +100,11 @@ function drawBasic() {
 }
 
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Month', 'Reach'],
-    ['Jan', 1000],
-    ['Feb', 1170],
-    ['Mar', 660],
-    ['Apr', 924],
-    ['May', 618],
-    ['Jun', 1348],
-    ['Jul', 775],
-    ['Aug', 1345],
-    ['Sep', 1121],
-    ['Oct', 1092],
-    ['Nov', 826],
-    ['Dec', 578]
-  ]);
-
+ 
+  var data = google.visualization.arrayToDataTable(twoArrayMonth);
   var options = {
     chart: {
-      title: 'จำนวนคนที่เข้าใช้งานในแต่ละเดือนในปีนี้',
+      title: 'User of each month in this year',
       subtitle: '',
     },
     bars: 'vertical', // Required for Material Bar Charts.
