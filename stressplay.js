@@ -32,6 +32,9 @@ function initData(){
     putData("time", 1);
     putData("gameStat", 1);
     buttonDisable("back");
+    ctdProcess = setInterval( () => {
+        getData()
+    }, 1000);
 }
 
 function buttonDisable(id){

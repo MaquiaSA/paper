@@ -34,6 +34,7 @@ body {
 
 .graph2 {
     margin-left: -25px;
+    margin-top: 10px;
 }
 
 button {
@@ -61,4 +62,8 @@ button:hover {
     margin-top: 2vw;
     margin-left: -15vw;
     font-size: 16pt;
+    width: 400px;
+    height: 620px;
+    overflow: scroll;
+
 }
